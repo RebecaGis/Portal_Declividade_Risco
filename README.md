@@ -1,5 +1,7 @@
 # Portal de Consulta de Declividade e Riscos
 
+https://portalriscojf.netlify.app/
+
 Portal web interativo para consulta de declividade e areas de risco em Juiz de Fora, com mapa Leaflet, camadas GeoJSON, busca de endereco e assistente com IA para orientacoes preventivas.
 
 ## Funcionalidades
