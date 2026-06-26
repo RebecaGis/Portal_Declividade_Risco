@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal de Consulta de Declividade e Riscos</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Nosso CSS personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Cabeçalho -->
+        <header class="header">
+            <h1><img class="title-icon" src="sinal-de-alerta.png" alt="" width="28" height="28"> Portal de Consulta de Declividade e Riscos</h1>
+            <p class="subtitle">Consulta interativa de declividade, áreas de risco e orientações preventivas apoiadas por IA</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Área do Mapa -->
+            <div id="map" class="map-container"></div>
+
+            <!-- Painel Lateral com Chatbot -->
+            <div class="sidebar">
+                <div class="info-panel">
+                    <h3><i class="fas fa-info-circle"></i> Legenda</h3>
+                    <div class="legend">
+                        <div class="legend-item">
+                            <span class="color-box" style="background: #2ecc71;"></span>
+                            <span>0-10% (Baixo risco)</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="color-box" style="background: #f1c40f;"></span>
+                            <span>10-20% (Médio risco)</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="color-box" style="background: #e67e22;"></span>
+                            <span>20-30% (Alto risco)</span>
+                        </div>
+                        <div class="legend-item">
+                            <span class="color-box" style="background: #e74c3c;"></span>
+                            <span>>30% (Muito alto risco)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="search-panel">
+                    <h3><i class="fas fa-magnifying-glass-location"></i> Buscar endereço</h3>
+                    <div class="address-search">
+                        <input id="addressInput" class="address-input" type="text" placeholder="Rua, bairro ou ponto de referência">
+                        <button id="addressButton" class="address-button" title="Buscar endereço">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    <div class="search-status" id="searchStatus"></div>
+                </div>
+
+                <div class="selection-panel" id="selectionPanel">
+                    <h3><i class="fas fa-location-dot"></i> Local selecionado</h3>
+                    <div class="selection-empty" id="selectionEmpty">
+                        Clique em um ponto do mapa para consultar a declividade.
+                    </div>
+                    <div class="selection-details" id="selectionDetails" hidden>
+                        <div class="slope-summary">
+                            <span class="slope-dot" id="slopeDot"></span>
+                            <div>
+                                <span class="slope-value" id="slopeValue">--</span>
+                                <span class="slope-label" id="slopeLabel">--</span>
+                            </div>
+                        </div>
+                        <div class="selection-meta" id="selectionCoords"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Chatbot flutuante -->
+        <button id="chatToggle" class="chat-toggle" title="Abrir assistente">
+            <img class="assistant-avatar assistant-avatar-button" src="chat-de-video.png" alt="Assistente engenheira">
+            <span class="chat-toggle-status" id="apiStatus">IA</span>
+        </button>
+
+        <div class="chat-container floating-chat" id="chatContainer" aria-hidden="true">
+            <div class="chat-header">
+                <img class="assistant-avatar assistant-avatar-header" src="chat-de-video.png" alt="">
+                <h3>Assistente de Prevenção</h3>
+                <button id="chatClose" class="chat-close" title="Fechar assistente">
+                    <i class="fas fa-xmark"></i>
+                </button>
+            </div>
+
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        Olá! Sou seu assistente para prevenção de riscos.
+                        Posso ajudar com informações sobre declividade, áreas de risco e medidas preventivas.
+                        Clique em qualquer ponto do mapa ou faça uma pergunta!
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-input-area">
+                <textarea
+                    id="userInput"
+                    class="chat-input"
+                    placeholder="Digite sua pergunta..."
+                    rows="1"
+                ></textarea>
+                <button id="sendButton" class="send-button">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+
+            <div class="suggestions">
+                <button class="suggestion-chip" onclick="askSuggestion('O que significa declividade?')">
+                    O que é declividade?
+                </button>
+                <button class="suggestion-chip" onclick="askSuggestion('Como prevenir deslizamentos?')">
+                    Como prevenir?
+                </button>
+                <button class="suggestion-chip" onclick="askSuggestion('Sinais de alerta')">
+                    Sinais de alerta
+                </button>
+            </div>
+        </div>
+
+        <!-- Rodapé -->
+        <footer class="footer">
+            <p>© 2024 - Portal de consulta geográfica para apoio à prevenção de riscos</p>
+            <p class="data-credits">
+                Camadas de risco geológico e hidrológico cedidas pela Prefeitura de Juiz de Fora.
+                Camada CPRM cedida pela CPRM.
+            </p>
+            <p class="signature">
+                Desenvolvido por
+                <a href="https://github.com/RebecaGis" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> Rebeca Diniz Moura
+                </a>
+            </p>
+            <p class="emergency"><i class="fas fa-exclamation-triangle"></i> Emergência: Defesa Civil 199 | Bombeiros 193</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

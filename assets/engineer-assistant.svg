@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-labelledby="title desc">
+  <title id="title">Assistente engenheira</title>
+  <desc id="desc">Avatar de uma engenheira com capacete de seguranca.</desc>
+  <circle cx="48" cy="48" r="44" fill="#ffffff"/>
+  <circle cx="48" cy="48" r="42" fill="#eef4f8" stroke="#2c3e50" stroke-width="4"/>
+  <path d="M24 52c0-18 10-31 24-31s24 13 24 31v10c0 9-6 17-15 20l-9 3-9-3c-9-3-15-11-15-20V52z" fill="#5b351f"/>
+  <path d="M22 42c2-16 13-27 26-27s24 11 26 27H22z" fill="#f4c542"/>
+  <path d="M31 42c1-11 7-19 17-19s16 8 17 19" fill="none" stroke="#d99a16" stroke-width="4" stroke-linecap="round"/>
+  <path d="M18 42h60c3 0 5 2 5 5v1H13v-1c0-3 2-5 5-5z" fill="#f1b51c"/>
+  <path d="M28 51c3-3 8-5 14-5h12c6 0 11 2 14 5v10c0 13-9 23-20 23S28 74 28 61V51z" fill="#f6c7a8"/>
+  <path d="M28 52c5-1 11-5 15-10 5 6 13 10 25 10v-2c-4-8-11-12-20-12S32 42 28 50v2z" fill="#5b351f"/>
+  <circle cx="39" cy="61" r="3" fill="#25313b"/>
+  <circle cx="57" cy="61" r="3" fill="#25313b"/>
+  <path d="M42 72c4 3 8 3 12 0" fill="none" stroke="#9b4c3d" stroke-width="3" stroke-linecap="round"/>
+  <path d="M31 86c4-8 10-12 17-12s13 4 17 12" fill="#3498db"/>
+  <path d="M48 74v12" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+  <path d="M38 86l10-12 10 12" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
