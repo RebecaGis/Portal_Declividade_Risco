@@ -1,5 +1,12 @@
 # Portal de Consulta de Declividade e Riscos
 
+<!-- project-badges:start -->
+![WebGIS: Leaflet](https://img.shields.io/static/v1?label=WebGIS&message=Leaflet&color=forestgreen&style=flat)
+![Backend: Node.js](https://img.shields.io/static/v1?label=Backend&message=Node.js&color=339933&style=flat)
+[![Autoria: Rebeca Diniz Moura](https://img.shields.io/static/v1?label=Autoria&message=Rebeca%20Diniz%20Moura&color=8b5cf6&style=flat)](https://github.com/RebecaGis)
+<!-- project-badges:end -->
+
+
 https://portalriscojf.netlify.app/
 
 Portal web interativo para consulta de declividade e areas de risco em Juiz de Fora, com mapa Leaflet, camadas GeoJSON, busca de endereco e assistente com IA para orientacoes preventivas.
