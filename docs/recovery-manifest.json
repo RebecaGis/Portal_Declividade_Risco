@@ -1,0 +1,76 @@
+{
+  "source": "https://drive.google.com/drive/folders/14Ebf0q2glH-7PERUTh3K9aaLc8gb201h",
+  "date": "2026-11-10",
+  "files": [
+    {
+      "path": "backend/.env.example",
+      "bytes": 30,
+      "sha256": "85bd85f0d62f7767c005f6aed84cdfca0d31e5be57dd07031f1b31f1293b669d"
+    },
+    {
+      "path": "backend/package-lock.json",
+      "bytes": 51408,
+      "sha256": "9f513ff0f20880f1364881b14e2ba20cff834dd4c63b48b7dfaa77741ee91b76"
+    },
+    {
+      "path": "backend/package.json",
+      "bytes": 412,
+      "sha256": "6b8285d8652eb12769f0cfa95108f010cbf707c32e40bb0765b371ff0cfd1c49"
+    },
+    {
+      "path": "backend/server.js",
+      "bytes": 7110,
+      "sha256": "84a537a6561cdeaac4019e1b12f4713a54aec4e23186825516f3089175fff844"
+    },
+    {
+      "path": "data/declividade.geojson",
+      "bytes": 28238001,
+      "sha256": "6202f1cafbb1d5fbef7396def7ebbe47bc98912c98a6237fb4534c44593c7853"
+    },
+    {
+      "path": "data/mapeamento_risco_geologico.geojson",
+      "bytes": 41750,
+      "sha256": "3a5de5d681cc395473dbfc460c9604b07f54da7d7fd18ab49339c57e10235690"
+    },
+    {
+      "path": "data/mapeamento_risco_geologico_poligono.geojson",
+      "bytes": 3107421,
+      "sha256": "d9fe11b0ede84bf2e9e6bee0a862d30a7f5cda58e361e0b00da591559d50a346"
+    },
+    {
+      "path": "data/mapeamento_risco_hidrologico.geojson",
+      "bytes": 3048814,
+      "sha256": "ceb8fa97b08b7cb337e2b9c7a11694ac7419e75479191204a9c7727c52df8b3a"
+    },
+    {
+      "path": "data/setores_perigo_cprm.geojson",
+      "bytes": 1988,
+      "sha256": "ee4804175df8c9765896c1692856d87c1efe6d09ab3030ff0776c4a61705959d"
+    },
+    {
+      "path": "scripts/build-netlify.js",
+      "bytes": 810,
+      "sha256": "08e9991a898fe7feb2ca4c7f111a5897158850235cc52376652d0311082cf9b0"
+    },
+    {
+      "path": "netlify/functions/api-diagnostic.js",
+      "bytes": 1790,
+      "sha256": "f99a8774f0276447358e9f83b9d2d4020d4da43d7073d3a45c1155473b796b22"
+    },
+    {
+      "path": "netlify/functions/chat-status.js",
+      "bytes": 1948,
+      "sha256": "c7751e0a1ea94c8ac0d2fd8718573d0e42929b99e02f8953162703c8c4baa1f5"
+    },
+    {
+      "path": "netlify/functions/chat.js",
+      "bytes": 2584,
+      "sha256": "a2d7ab0660ab0859aefb08bbf1b376bcde361a6a23689e6b2c29934d7f24a283"
+    },
+    {
+      "path": "netlify/functions/geocode.js",
+      "bytes": 1633,
+      "sha256": "3e1c5f7bc426489f8afefadafd0355db08bfc53ab43a099394de825f9ecc1cd8"
+    }
+  ]
+}
