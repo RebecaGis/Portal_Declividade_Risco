@@ -6,7 +6,9 @@
 [![Autoria: Rebeca Diniz Moura](https://img.shields.io/static/v1?label=Autoria&message=Rebeca%20Diniz%20Moura&color=8b5cf6&style=flat)](https://github.com/RebecaGis)
 <!-- project-badges:end -->
 
-https://portalriscojf.netlify.app/
+## Acesse o site
+
+[**Abrir aplicação publicada**](https://portalriscojf.netlify.app/)
 
 Portal web interativo para consulta de declividade e areas de risco em Juiz de Fora, com mapa Leaflet, camadas GeoJSON, busca de endereco e assistente com IA para orientacoes preventivas.
 
